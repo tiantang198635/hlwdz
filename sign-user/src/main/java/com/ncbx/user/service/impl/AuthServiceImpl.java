@@ -36,18 +36,6 @@ public class AuthServiceImpl implements AuthService {
     @Value("${jwt.tokenHead}")
     private String tokenHead;
 
-   /* @Autowired
-    public AuthServiceImpl(
-            //AuthenticationManager authenticationManager,
-            UserDetailsService userDetailsService,
-            JwtTokenUtil jwtTokenUtil,
-            UserDao userDao) {
-        //this.authenticationManager = authenticationManager;
-        this.userDetailsService = userDetailsService;
-        this.jwtTokenUtil = jwtTokenUtil;
-        this.userDao = userDao;
-    }*/
-
     @Override
     public User register(User userToAdd) {
         final String username = userToAdd.getName();

@@ -16,8 +16,10 @@ jwt:
   secret: mySecret
   expiration: 604800
   tokenHead: "Bearer "
-#  route:
-#    authentication:
-#      path: auth
-#      refresh: refresh
-#      register: auth/register
+
+#cookie保存token时长
+cookie:
+  maxage: 3600
+
+header:
+  username: CUR_USERNAME
