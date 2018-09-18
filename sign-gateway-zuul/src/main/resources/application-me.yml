@@ -1,0 +1,22 @@
+spring: 
+  datasource:
+     #oracle
+     driverClassName: oracle.jdbc.driver.OracleDriver
+     url: jdbc:oracle:thin:@47.97.98.41:1521:orcl
+     username: hlwdq
+     password: Hds130818ncbxjs
+     initialSize: 2
+     minIdle: 1
+     maxActive: 50
+     maxWait: 60000
+     timeBetweenEvictionRunsMillis: 60000
+     minEvictableIdleTimeMillis: 300000
+     validationQuery: select 'x'
+     testWhileIdle: true
+     testOnBorrow: false
+     testOnReturn: false
+     poolPreparedStatements: true
+     maxPoolPreparedStatementPreConnectionSize: 20
+     maxOpenPreparedStatements: 20
+     filters: config,wall,stat
+     connectionProperties: druid.stat.slowSqlMillis=200;druid.stat.logSlowSql=true;config.decrypt=true

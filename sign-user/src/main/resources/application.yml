@@ -1,0 +1,23 @@
+#配置mybatis
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+
+server:
+  port: 8085
+      
+spring:
+  profiles:
+    active: me
+  application:
+    name: sign-user
+
+jwt:
+  header: Authorization
+  secret: mySecret
+  expiration: 604800
+  tokenHead: "Bearer "
+#  route:
+#    authentication:
+#      path: auth
+#      refresh: refresh
+#      register: auth/register

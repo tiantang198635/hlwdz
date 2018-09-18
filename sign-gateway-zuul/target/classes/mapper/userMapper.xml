@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ncbx.user.dao.UserDao">
+  <resultMap id="BaseResultMap" type="com.ncbx.gateway.user.entity.User">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="pwd" jdbcType="VARCHAR" property="pwd" />
+    <result column="create_time" jdbcType="DATE" property="createTime" />
+  </resultMap>
+  <insert id="insert" parameterType="com.ncbx.gateway.user.entity.User">
+    insert into tab_user (name,pwd,create_time)
+    values (#{name},#{pwd},#{createTime})
+  </insert>
+   <select id="getUser" resultType="com.ncbx.gateway.user.entity.User">
+        select * from tab_user;
+   </select>
+   <select id="findUserByName" resultType="com.ncbx.gateway.user.entity.User">
+   		select * from tab_user where name=#{name}
+   </select>
+</mapper>
