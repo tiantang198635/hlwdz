@@ -46,6 +46,14 @@
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
     </dependency> 
+    
+    <!-- zuul重试机制 --> 
+    <dependency>
+	    <groupId>org.springframework.retry</groupId>
+	    <artifactId>spring-retry</artifactId>
+	</dependency>
+
+	<!-- 日志 -->
 	 <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-slf4j-impl</artifactId>

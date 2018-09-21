@@ -18,6 +18,7 @@
 
   <properties>
        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+       
        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
        <spring.boot.version>2.0.3.RELEASE</spring.boot.version>
        <java.version>1.8</java.version>
@@ -86,5 +87,11 @@
   	<module>sign-gateway-zuul</module>
   	<module>sign-user</module>
 	<module>sign-common</module>
-  </modules>
+    <module>sign-account</module>
+    <module>sign-http</module>
+    <module>sign-contract</module>
+    <module>sign-template</module>
+    <module>sign-batch</module>
+    <module>sign-config</module>
+</modules>
 </project>

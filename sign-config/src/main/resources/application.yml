@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: sign-config
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          username: 
+          password: 
+          uri: https://github.com/tiantang198635/hlwdz.git/sign-config/
+          searchPaths: configs
+server:
+  port: 9021

@@ -1,0 +1,22 @@
+package com.sign.template;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.ComponentScan;
+
+/**
+ * template的启动类
+ * @author win7
+ *
+ */
+@SpringBootApplication
+@EnableEurekaClient
+@EnableDiscoveryClient
+@ComponentScan(basePackages={"com.sign"})
+public class SignTemplateApplication {
+	public static void main(String[] args) {
+        SpringApplication.run( SignTemplateApplication.class, args );
+    }
+}

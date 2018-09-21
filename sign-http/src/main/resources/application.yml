@@ -1,0 +1,12 @@
+#配置mybatis
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+
+server:
+  port: 7041
+      
+spring:
+  profiles:
+    active: me
+  application:
+    name: sign-http
