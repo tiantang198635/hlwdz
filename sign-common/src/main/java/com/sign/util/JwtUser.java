@@ -6,7 +6,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sign.vo.UserDetails;
 
 public class JwtUser implements UserDetails {
-    private final String id;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private final String id;
     private final String username;
     private final String password; 
     private final Date lastPasswordResetDate;
