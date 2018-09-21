@@ -1,3 +1,5 @@
+server:
+  port: 7061
 #配置mybatis
 mybatis:
   mapperLocations: classpath:mapper/*.xml

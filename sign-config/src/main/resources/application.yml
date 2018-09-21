@@ -8,7 +8,7 @@ spring:
         git:
           username: 
           password: 
-          uri: https://github.com/tiantang198635/hlwdz.git/sign-config/
-          searchPaths: configs
+          uri: https://github.com/tiantang198635/hlwdz.git/
+          searchPaths: sign-config/configs
 server:
   port: 9021
