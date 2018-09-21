@@ -35,5 +35,6 @@ jwt:
       path: auth
       refresh: refresh
       register: auth/register
+
 header:
   username: CUR_USERNAME

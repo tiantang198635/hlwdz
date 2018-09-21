@@ -16,7 +16,7 @@ jwt:
   secret: mySecret
   expiration: 604800
   tokenHead: "Bearer "
-
+  
 #cookie保存token时长
 cookie:
   maxage: 3600

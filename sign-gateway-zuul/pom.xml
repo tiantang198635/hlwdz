@@ -3,8 +3,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.ncbx</groupId>
-    <artifactId>hlwdz</artifactId>
+    <groupId>com.sign</groupId>
+    <artifactId>sign</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>sign-gateway-zuul</artifactId>
@@ -18,7 +18,7 @@
   </properties> 
   <dependencies>
   	<dependency>
-  		<groupId>com.ncbx</groupId>
+  		<groupId>com.sign</groupId>
   		<artifactId>sign-common</artifactId>
   		<version>${ncbx.version}</version>
   	</dependency>
@@ -46,21 +46,18 @@
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
     </dependency> 
-	
-	<!-- log start -->
-	<dependency>
-       <groupId>org.apache.logging.log4j</groupId>
-       <artifactId>log4j-slf4j-impl</artifactId>
-     </dependency>
-     <dependency>
-       <groupId>org.apache.logging.log4j</groupId>
-       <artifactId>log4j-core</artifactId>
-     </dependency>
-     <dependency>
-       <groupId>org.apache.logging.log4j</groupId>
-       <artifactId>log4j-api</artifactId>
-     </dependency>
-	<!-- log end --> 
+	 <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-slf4j-impl</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+    </dependency>
 	<dependency>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-test</artifactId>

@@ -25,7 +25,3 @@ spring:
      maxOpenPreparedStatements: 20
      filters: config,wall,stat
      connectionProperties: druid.stat.slowSqlMillis=200;druid.stat.logSlowSql=true;config.decrypt=true
-
-#应用服务器域名名称
-context:
-  domain: localhost
