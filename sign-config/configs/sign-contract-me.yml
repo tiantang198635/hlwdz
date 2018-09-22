@@ -53,3 +53,5 @@ spring:
 #应用服务器域名名称
 context:
   domain: localhost
+header:
+  username: CUR_USERNAME
