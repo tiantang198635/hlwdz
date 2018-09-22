@@ -23,7 +23,7 @@
        <spring.boot.version>2.0.3.RELEASE</spring.boot.version>
        <java.version>1.8</java.version>
        <ojdbc6.version>11.2.0.3</ojdbc6.version>
-       <ncbx.version>0.0.1-SNAPSHOT</ncbx.version>
+       <sign.version>0.0.1-SNAPSHOT</sign.version>
        <fastjson.version>1.2.33</fastjson.version>
        <log4j.version>2.11.0</log4j.version>
    </properties>
@@ -93,5 +93,13 @@
     <module>sign-template</module>
     <module>sign-batch</module>
     <module>sign-config</module>
-</modules>
+    <module>base-notice</module>
+    <module>base-customer</module>
+    <module>base-account</module>
+    <module>base-payment</module>
+    <module>base-charging</module>
+    <module>base-cfcasign</module>
+    <module>base-authentication</module>
+    <module>base-file</module>
+  </modules>
 </project>

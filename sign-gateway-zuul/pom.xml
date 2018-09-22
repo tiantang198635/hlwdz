@@ -20,7 +20,7 @@
   	<dependency>
   		<groupId>com.sign</groupId>
   		<artifactId>sign-common</artifactId>
-  		<version>${ncbx.version}</version>
+  		<version>${sign.version}</version>
   	</dependency>
     <dependency>
 		<groupId>org.springframework.boot</groupId>

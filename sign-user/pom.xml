@@ -18,7 +18,7 @@
   	<dependency>
   		<groupId>com.sign</groupId>
   		<artifactId>sign-common</artifactId>
-  		<version>${ncbx.version}</version>
+  		<version>${sign.version}</version>
   	</dependency>
     <dependency>
 		<groupId>org.springframework.boot</groupId>
@@ -32,6 +32,10 @@
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-config</artifactId>
     </dependency>
+    <dependency>
+          <groupId>org.springframework.cloud</groupId>
+          <artifactId>spring-cloud-starter-openfeign</artifactId>
+      </dependency>
 	<dependency>
 	     <groupId>org.springframework</groupId>
 	     <artifactId>spring-jdbc</artifactId>
