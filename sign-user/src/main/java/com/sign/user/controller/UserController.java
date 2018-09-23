@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sign.user.configure.UserConfigure;
+import com.sign.user.feign.AccountServiceFeign;
 import com.sign.util.RedisUtil;
 
 @RestController
@@ -17,13 +18,17 @@ public class UserController {
 	private UserConfigure configure;
 	
 	@Autowired
+	private AccountServiceFeign accountServiceFeign;
+	
+	@Autowired
 	private RedisUtil redisUtil;
 	
 	@RequestMapping(value = "info", method = RequestMethod.GET)
     public String info(HttpServletRequest request){
         // Return the token
 		String username = request.getHeader(configure.curUserName);
-		redisUtil.set("foo", "test");
-        return "test"+username+redisUtil.get("foo");
+		//redisUtil.set("foo", "test");
+        //return "test"+username+redisUtil.get("foo")+","+accountServiceFeign.account(username);
+		return this.accountServiceFeign.account(username);
     }
 }
