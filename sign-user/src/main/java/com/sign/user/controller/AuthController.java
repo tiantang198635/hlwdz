@@ -42,6 +42,18 @@ public class AuthController {
         return ResponseEntity.ok(new JwtAuthenticationResponse(token));
     }
     
+    
+    @RequestMapping(value = "auth/test")
+    public ResponseEntity<?> test(HttpServletResponse response) throws AuthenticationException{
+         
+    	//将token设置到客户端的cookies中
+    	Cookie cookie = new Cookie("test","test" );
+        cookie.setMaxAge(configure.maxAge);
+        cookie.setDomain(configure.domain);
+        cookie.setPath("/");
+        response.addCookie(cookie); 
+        return ResponseEntity.ok("test");
+    }
 
     @RequestMapping(value = "refresh", method = RequestMethod.GET)
     public ResponseEntity<?> refreshAndGetAuthenticationToken(
