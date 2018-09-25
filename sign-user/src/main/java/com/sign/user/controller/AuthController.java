@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sign.entity.User;
-import com.sign.http.response.ResponseCodeEnum;
+import com.sign.http.response.ErrorCodeEnum;
 import com.sign.http.response.ResponseResult;
 import com.sign.user.configure.UserConfigure;
 import com.sign.user.service.AuthService;
@@ -35,7 +35,7 @@ public class AuthController {
     @RequestMapping(value = "auth", method = RequestMethod.POST)
     public ResponseEntity<?> createAuthenticationToken(
             @RequestBody JwtAuthenticationRequest authenticationRequest,HttpServletResponse response) {
-        ResponseCodeEnum responseEnum = ResponseCodeEnum.SUCCESS;
+        ErrorCodeEnum errorEnum = ErrorCodeEnum.SUCCESS;
         try {
 	        String token = authService.login(authenticationRequest.getName(), authenticationRequest.getPwd());
 	        if(StringUtils.isNotEmpty(token)) {
@@ -46,14 +46,14 @@ public class AuthController {
 	            cookie.setPath("/");
 	            response.addCookie(cookie);
 	        }else {
-	        	responseEnum = ResponseCodeEnum.UserNameOrPasswordError;
+	        	errorEnum = ErrorCodeEnum.UserNameOrPasswordError;
 	        }
         }catch (Exception e) {
 			// TODO: handle exception
         	logger.error("createAuthenticationToken error:{}",e.getMessage());
-        	responseEnum = ResponseCodeEnum.SystemError;
+        	errorEnum = ErrorCodeEnum.SystemError;
 		}
-        return ResponseEntity.ok(new ResponseResult(responseEnum.respCode,responseEnum.explainCn));
+        return ResponseEntity.ok(new ResponseResult(errorEnum.respCode,errorEnum.explainCn));
     }
     
     

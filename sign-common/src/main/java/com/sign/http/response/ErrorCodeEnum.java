@@ -1,6 +1,6 @@
 package com.sign.http.response;
 
-public enum ResponseCodeEnum {
+public enum ErrorCodeEnum {
 	//系统类错误1000开始编号（1000-1999）
 	SUCCESS(1000,"成功","success"),
 	SystemError(1001,"系统错误","system error"),
@@ -28,18 +28,18 @@ public enum ResponseCodeEnum {
 	public int respCode;
 	public String explainCn;
 	public String explainEn;
-	private ResponseCodeEnum(int respCode,String explainCn,String explainEn) {
+	private ErrorCodeEnum(int respCode,String explainCn,String explainEn) {
 		this.respCode = respCode;
 		this.explainCn = explainCn;
 		this.explainEn = explainEn;
 	}
 	
-	public static ResponseCodeEnum valueOf(int respCode) {
-		ResponseCodeEnum[] var1 = values();
+	public static ErrorCodeEnum valueOf(int respCode) {
+		ErrorCodeEnum[] var1 = values();
         int var2 = var1.length;
 
         for(int var3 = 0; var3 < var2; ++var3) {
-        	ResponseCodeEnum rsCode = var1[var3];
+        	ErrorCodeEnum rsCode = var1[var3];
             if (rsCode.respCode==respCode) {
                 return rsCode;
             }
