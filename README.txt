@@ -12,7 +12,7 @@
 	├── base-file					   -- 文件管理服务 |6161端口|
 	├── sign-eurka           -- 注册中心服务 |8081端口|
 	├── sign-gateway-zuul    -- 路由网卡服务 |9000端口|
-	├── sign-config          -- 配置中心服务 |9021端口|
+	├── sign-config          -- 配置中心服务 |9021端口|，所有微服务的配置文件存放在sign-config/configs目录下，组成：微服务名-环境(如sign-user-me.yml)
 	├── sign-user            -- 互签用户服务 |7001端口|
 	├── sign-account         -- 互签账户服务 |7021端口|
 	├── sign-http            -- 互签对外服务 |7041端口|
