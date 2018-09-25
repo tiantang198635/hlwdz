@@ -25,6 +25,12 @@ public class UserConfigure implements WebMvcConfigurer  {
     @Value("${header.username}")
     public String curUserName;
     
+    /**
+     * 上传文件保存的目录
+     */
+    @Value("${upload.folder}")
+    public String UPLOADED_FOLDER;
+    
     @Autowired
     private TokenHandlerInterceptor tokenHandlerInterceptor;
     

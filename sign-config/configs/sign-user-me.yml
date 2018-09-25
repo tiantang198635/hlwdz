@@ -69,4 +69,5 @@ eureka:
 #应用服务器域名名称
 context:
   domain: localhost
-  
+upload:
+  folder: E:\software\nginx-1.14.0\html\
