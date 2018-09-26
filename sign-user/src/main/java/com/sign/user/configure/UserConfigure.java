@@ -26,10 +26,10 @@ public class UserConfigure implements WebMvcConfigurer  {
     public String curUserName;
     
     /**
-     * 上传文件保存的目录
+     * 上传用户头像保存的目录
      */
-    @Value("${upload.folder}")
-    public String UPLOADED_FOLDER;
+    @Value("${upload.user.header.folder}")
+    private String uploadUserHeaderFloder;
     
     @Autowired
     private TokenHandlerInterceptor tokenHandlerInterceptor;
@@ -41,4 +41,11 @@ public class UserConfigure implements WebMvcConfigurer  {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(tokenHandlerInterceptor).addPathPatterns("/**").excludePathPatterns("/auth/**");
     }
+
+	public String getUploadUserHeaderFloder() {
+		if(!this.uploadUserHeaderFloder.endsWith("/")) {
+			this.uploadUserHeaderFloder += "/";
+		}
+		return uploadUserHeaderFloder;
+	} 
 }

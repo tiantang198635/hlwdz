@@ -4,6 +4,8 @@ public enum ErrorCodeEnum {
 	//系统类错误1000开始编号（1000-1999）
 	SUCCESS(1000,"成功","success"),
 	SystemError(1001,"系统错误","system error"),
+	UploadFileEmpty(1002,"没有选择待上传的文件","Upload File is empty"),
+	UploadFileTypeError(1003,"上传文件类型错误","Upload File Type error"),
 	//用户类错误20000开始编号（2000-2999）
 	UserNameOrPasswordError(2000,"用户名或密码错误","username or password error");
 	
