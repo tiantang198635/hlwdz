@@ -70,4 +70,6 @@ eureka:
 context:
   domain: localhost
 upload:
-  folder: E:\software\nginx-1.14.0\html\
+  user:
+    header:
+      folder: E:\software\nginx-1.14.0\html\assets\images\uheader\
